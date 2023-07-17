@@ -1,0 +1,97 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{52C17ED2-2EC0-4F43-A6B6-66F20B919CD2}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Roma.Core</RootNamespace>
+    <AssemblyName>Roma.Core</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.ValueTuple, Version=4.0.3.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.ValueTuple.4.5.0\lib\netstandard1.0\System.ValueTuple.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Xml" />
+    <Reference Include="Util.Core">
+      <HintPath>..\..\Util\Util.Core\bin\Debug\Util.Core.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Model\Cargo.cs" />
+    <Compile Include="Model\Cartas\Asesino.cs" />
+    <Compile Include="Model\Cartas\CartaFactory.cs" />
+    <Compile Include="Model\Cartas\Chantaje.cs" />
+    <Compile Include="Model\Cartas\Guardaespaldas.cs" />
+    <Compile Include="Model\Cartas\ICarta.cs" />
+    <Compile Include="Model\Cartas\Seduccion.cs" />
+    <Compile Include="Model\Cartas\TraficoInfluencias.cs" />
+    <Compile Include="Model\Cartas\Tribuno.cs" />
+    <Compile Include="Model\Concesiones\Concesion.cs" />
+    <Compile Include="Model\Concesiones\ConcesionAduanas.cs" />
+    <Compile Include="Model\Concesiones\ConcesionArmamento.cs" />
+    <Compile Include="Model\Concesiones\ConcesionAstilleros.cs" />
+    <Compile Include="Model\Concesiones\ConcesionFactory.cs" />
+    <Compile Include="Model\Concesiones\ConcesionGrano.cs" />
+    <Compile Include="Model\Concesiones\ConcesionImpuestos.cs" />
+    <Compile Include="Model\Concesiones\ConcesionMinas.cs" />
+    <Compile Include="Model\Concesiones\ConcesionTerrateniente.cs" />
+    <Compile Include="Model\Concesiones\IConcesion.cs" />
+    <Compile Include="Model\Concesiones\MomentoActivacion.cs" />
+    <Compile Include="Model\Guerra\EstadoGuerra.cs" />
+    <Compile Include="Model\NivelSequia.cs" />
+    <Compile Include="Model\Provincias\Formula.cs" />
+    <Compile Include="Model\Guerra\Guerra.cs" />
+    <Compile Include="Model\Guerra\GuerraFactory.cs" />
+    <Compile Include="Model\Guerra\Heroe.cs" />
+    <Compile Include="Model\Guerra\IGuerra.cs" />
+    <Compile Include="Model\Provincias\Provincia.cs" />
+    <Compile Include="Model\Provincias\ProvinciaFactory.cs" />
+    <Compile Include="Model\Guerra\TipoGuerra.cs" />
+    <Compile Include="Model\Senadores\Estadista.cs" />
+    <Compile Include="Model\Ejercito\Flota.cs" />
+    <Compile Include="Model\Senadores\Habilidad.cs" />
+    <Compile Include="Model\Senadores\ISenador.cs" />
+    <Compile Include="Model\Ejercito\ITropa.cs" />
+    <Compile Include="Model\Ejercito\Legion.cs" />
+    <Compile Include="Model\Senadores\Senador.cs" />
+    <Compile Include="Model\Senadores\SenadorFactory.cs" />
+    <Compile Include="Model\Senadores\TipoHabilidad.cs" />
+    <Compile Include="Model\Senadores\TipoSenador.cs" />
+    <Compile Include="Model\Ejercito\Tropa.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="packages.config" />
+  </ItemGroup>
+  <ItemGroup />
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>
